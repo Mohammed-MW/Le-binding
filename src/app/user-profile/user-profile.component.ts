@@ -26,6 +26,23 @@ export class UserProfileComponent {
     this.user.condition = !this.user.condition;
   }
 
+
+  //   <!-- <div class="demo-ngClass">
+  //     <p [ngClass]="{'success' : etat=='Success','danger': etat=='danger', 'warning': etat=='warning''}">
+  //         Ce texte va changer de couleur en fonctions de la conditions
+  //     </p>
+  //     <div>
+  //         <button (click)="changerEtat('success')">
+  //             succes
+  //         </button>
+  //         <button (click)="changerEtat('warning')">
+  //             warning
+  //         </button>
+  //         <button (click)="changerEtat('danger')">
+  //             danger
+  //         </button>
+  //     </div>
+  // </div> -->
   //   wilders: Array<string> = [
   //     "hana",
   //     "steven",
