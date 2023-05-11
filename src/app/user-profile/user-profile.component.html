@@ -1,19 +1,47 @@
-<div>
-    <img src="{{user.photo}}" alt="Picture">
+<div class="container">
+    <div>
+        <img [src]="user.photo" alt="Picture">
 
-    <p>Nom : {{user.name}}</p>
-    <p>Prénom : {{user.firstName}}</p>
-    <form action="submit">
-        <label for="name">{{user.quote}}</label><br>
+        <p>Nom : {{user.name}}</p>
+        <p>Prénom : {{user.firstName}}</p>
+        <form action="submit">
+            <label for="name">{{user.quote}}</label><br>
 
-        <input type="text" [(ngModel)]="user.quote" placeholder="New quote ?" />
+            <input type="text" [(ngModel)]="user.quote" placeholder="New quote ?" />
 
-    </form>
+        </form>
+    </div>
+
+    <div>
+        <p *ngIf="user.condition">{{user.age}}</p>
+        <button (click)="afficherAge()">Hide/show</button>
+    </div>
 </div>
 
-<div>
-    <p>{{user.age}}</p>
-    <button (click)="hideAge()">masquer mon age</button>
-    <button (click)="showAge()">Afficher mon age</button>
 
-</div>
+<!-- //////////////////////////////////////////////////////////////////////////////////////// -->
+<!-- <p *ngIf="user.condition">
+    only when the condition is true
+</p> -->
+<!-- <ul>
+        La liste des etudiant est :
+
+        <li *ngFor="let prenom of wilders">
+            {{prenom}}
+
+        </li>
+    </ul> -->
+<!-- <div [ngSwitch]="user.fruit">
+    <div *ngSwitchCase="'apple'">
+        Pomme
+    </div>
+    <div *ngSwitchCase="'orange'">
+        Orange
+    </div>
+    <div *ngSwitchCase="'Banane'">
+        Banane
+    </div>
+    <div *ngSwitchDefault>
+        fruit ne correspond a aucune valeur
+        fruit est : {{user.fruit }}
+    </div> -->
