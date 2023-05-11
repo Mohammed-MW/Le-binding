@@ -1,0 +1,19 @@
+<div>
+    <img src="{{user.photo}}" alt="Picture">
+
+    <p>Nom : {{user.name}}</p>
+    <p>Prénom : {{user.firstName}}</p>
+    <form action="submit">
+        <label for="name">{{user.quote}}</label><br>
+
+        <input type="text" id="getvalue" placeholder="Change the value ?" (change)="applyNewQuote()">
+
+    </form>
+</div>
+
+<div>
+    <p>{{user.age}}</p>
+    <button (click)="hideAge()">masquer mon age</button>
+    <button (click)="showAge()">Afficher mon age</button>
+
+</div>
