@@ -6,7 +6,7 @@
     <form action="submit">
         <label for="name">{{user.quote}}</label><br>
 
-        <input type="text" id="getvalue" placeholder="Change the value ?" (change)="applyNewQuote()">
+        <input type="text" [(ngModel)]="user.quote" placeholder="New quote ?" />
 
     </form>
 </div>
